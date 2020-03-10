@@ -1,3 +1,6 @@
+require "csv"
+
+
 def terminal_app
     puts "welcome to supply mania"
     puts "enter as : customer or supplier or exit"
@@ -10,12 +13,17 @@ def terminal_app
             pin = gets.chomp
             if pin == "12345"
                 puts "welcome"
-                puts "what would you like to do today?"
-                puts "options : update or delete a file"
-                # opt = gets.chomp
-                # case
-                # when opt == "update"
-                # end
+                puts "update a file or see curruent file"
+                opt = gets.chomp
+                case
+                when opt == "see"
+                    CSV.foreach("./Book1.csv") do |row|
+                      puts row.inspect
+                      end
+
+
+
+                end
 
             else
                 return puts " Wrong pin !!!! please try again !!!"
