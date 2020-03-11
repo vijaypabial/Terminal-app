@@ -13,16 +13,23 @@ def terminal_app
             pin = gets.chomp
             if pin == "12345"
                 puts "welcome"
-                puts "update a file or see curruent file"
+                puts "see or add or delete curruent file"
                 opt = gets.chomp
                 case
                 when opt == "see"
-                    CSV.foreach("./Book1.csv") do |row|
+                    CSV.foreach("./Retail.csv") do |row|
                       puts row.inspect
                       end
+                # when opt == "add"
+                #     puts "Please enter a filename"
+                #     filename = gets.chomp
+                #     csv = CSV.open("./#{filename}.csv", "a+")
+                #     puts "please enter data and to finish enter !quit in the next line"
+                #     data = gets.chomp
+                #     while !quit == false
+                #         csv << [data].to_a
 
-
-
+                    end
                 end
 
             else
