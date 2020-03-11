@@ -20,14 +20,23 @@ def terminal_app
                     CSV.foreach("./Retail.csv") do |row|
                       puts row.inspect
                       end
-                # when opt == "add"
-                #     puts "Please enter a filename"
-                #     filename = gets.chomp
-                #     csv = CSV.open("./#{filename}.csv", "a+")
-                #     puts "please enter data and to finish enter !quit in the next line"
-                #     data = gets.chomp
-                #     while !quit == false
-                #         csv << [data].to_a
+                when opt == "add"
+                    puts "Please enter a filename"
+                    filename = gets.chomp
+                    csv = CSV.open("./#{filename}.csv", "a+")
+                    puts "please enter data and to finish enter !quit in the next line"
+                    puts "please enter data"
+                    out = false
+                    while out == false
+                        data = gets.chomp
+                    if data == "exit"
+                        out = true
+                    else
+                        csv << [data].to_a
+                        end
+                    end
+end
+                    
 
                     end
                 end
@@ -35,10 +44,7 @@ def terminal_app
             else
                 return puts " Wrong pin !!!! please try again !!!"
             end
-        when option == "customer"
-            puts "happy shopping"
-         end
-    end
+    
 
          
 
