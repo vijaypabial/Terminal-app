@@ -18,11 +18,11 @@
 # # unless 
 
 # # p Dir["../supplier1"].select { |e| File.file?(e) }
-# p Dir.entries("./supplier1").select {|f| !File.directory? f}
+# p p Dir.entries("./supplier/").select {|f| !File.directory? f}
 
 # newrow = row.each_with_index { |rowcontent , row_num| puts "#     {rowcontent} #{row_num}" }
-# p Dir.entries("./supplier1").select {|f| !File.directory? f}
-require 'csv'
+# # p Dir.entries("./supplier1").select {|f| !File.directory? f}
+# require 'csv'
 
 # CSV.open('test.csv','w', 
 #     :write_headers=> true,
@@ -36,7 +36,9 @@ require 'csv'
 #   }
 # end
 # Adding new data
-headers = ["name","height", "age","gender"]
-CSV.open('file.csv', 'a+') do |row|
- row << headers
-end
+# headers = ["name","height", "age","gender"]
+# CSV.open('file.csv', 'a+') do |row|
+#  row << headers
+# end
+# puts del = File.delete("./supplier/hello.csv")
+p p Dir.entries("./supplier/").select {|f| !File.directory? f}
