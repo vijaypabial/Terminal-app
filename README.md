@@ -1,8 +1,10 @@
 # Terminal-app
-Assignment 
+Assignment 2 - Develop an application.
 
 
-The link to my github repository : git@github.com:vijaypabial/Terminal-app.git
+link to access the github file repository : git@github.com:vijaypabial/Terminal-app.git
+
+Please refer to "help" folder for help to run this file.
 
 ** Purpose && Scope
 
