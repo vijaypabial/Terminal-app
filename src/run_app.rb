@@ -1,19 +1,23 @@
+
+require 'colorize'
 require "csv"
+require 'TableCSV'
+require 'cli-colorize'
 # require_relative "methods"
 def terminal_app
     tries = 3
     my_pin = "12"
     while tries > 0
       puts "Welcome to the Supply Mania!!!!"
-      puts "please enter your pin code:"
-      pin = gets.chomp
+      puts "please enter your pin code:".red
+      pin= STDIN.gets.chomp
       if pin == "exit"
         exit
       elsif pin == my_pin
         puts "welcome"
         break
       elsif pin != my_pin
-        puts "incorrect pin, try again"
+        puts "incorrect pin, try again".red
         tries -= 1
       end
       if tries <= 0
@@ -88,5 +92,7 @@ def terminal_app
           end
         end
 end
-
+ARGV.each do|a|
+  puts "Argument: #{a}"
+end
 terminal_app

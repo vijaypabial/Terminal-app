@@ -1,12 +1,22 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    TableCSV (0.1.0)
+      nokogiri (>= 1.5.11)
+    cli-colorize (2.0.0)
+    colorize (0.8.1)
     csv (3.1.2)
+    mini_portile2 (2.4.0)
+    nokogiri (1.10.9)
+      mini_portile2 (~> 2.4.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  TableCSV (~> 0.1.0)
+  cli-colorize (~> 2.0)
+  colorize (~> 0.8.1)
   csv
 
 BUNDLED WITH
